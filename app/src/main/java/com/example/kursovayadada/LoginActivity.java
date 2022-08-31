@@ -27,22 +27,22 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void onLoginButton(View view)
-    {
-        users.add(new User("a","a","adm","Amir"));
-        users.add(new User("b","b","usr","SimpleAmir"));
+    public void onLoginButton(View view) {
+        users.add(new User("a", "a", "adm", "Amir"));
+        users.add(new User("b", "b", "usr", "SimpleAmir"));
         login = (EditText) findViewById(R.id.editTextLogin);
         password = (EditText) findViewById(R.id.editTextPassword);
-        int i = 1;
-        if (login.getText().toString().equals(users.get(i).getLogin()) && password.getText().toString().equals(users.get(i).getPassword())) {
-            if (users.get(i).getRole() != null) {
-                openNewActivity(users.get(i).getRole(),users.get(i));
-                Toast.makeText(this, "Вход в аккаунт", Toast.LENGTH_SHORT).show();
-            }else {
-                System.err.println("Нет роли у пользователя");
+        for (int i = 0; i < users.size(); i++) {
+            if (login.getText().toString().equals(users.get(i).getLogin()) && password.getText().toString().equals(users.get(i).getPassword())) {
+                if (users.get(i).getRole() != null) {
+                    openNewActivity(users.get(i).getRole(), users.get(i));
+                    Toast.makeText(this, "Вход в аккаунт", Toast.LENGTH_SHORT).show();
+                } else {
+                    System.err.println("Нет роли у пользователя");
+                }
+            } else {
+                System.err.println("Пользователь не найден");
             }
-        }else{
-            System.err.println("Пользователь не найден");
         }
         // выводим сообщение
     }
@@ -53,7 +53,6 @@ public class LoginActivity extends AppCompatActivity {
             intent.putExtra("user", user); //Optional parameters
             startActivity(intent);
         } else {
-            System.err.println("Обычный пользователь");
             Intent intent = new Intent(this, UserMainActivity.class);
             startActivity(intent);
         }

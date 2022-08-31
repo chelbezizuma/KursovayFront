@@ -27,6 +27,13 @@ public class MainUserScheduleActivity extends AppCompatActivity {
         savedInstanceState = getIntent().getExtras();
         if (savedInstanceState != null) {
             position = savedInstanceState.getInt("date");
+
+            if (position == -1)
+                position = 0;
+
+            if (position == -2)
+                position = 1;
+
             System.err.println("aaaaaaaaaasdasdasd"+position);
             SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
             ViewPager viewPager = binding.viewPager;

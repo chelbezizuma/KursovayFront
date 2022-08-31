@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.kursovayadada.R;
 import com.example.kursovayadada.Spinner;
@@ -72,5 +73,9 @@ public class AddSubjectActivity extends AppCompatActivity {
                 spinner.showDialogWindow(AddSubjectActivity.this,textViewTeacher,teacherList);
             }
         });
+    }
+
+    public void buttonSaveSubject(View view) {
+        Toast.makeText(this, "типо данные сохранены Нет бд потом добавлю", Toast.LENGTH_SHORT).show();
     }
 }

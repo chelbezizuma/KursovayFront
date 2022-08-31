@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.kursovayadada.R;
 import com.example.kursovayadada.Spinner;
@@ -111,5 +112,9 @@ public class AddScheduleInformationActivity extends AppCompatActivity {
                 spinner.showDialogWindow(AddScheduleInformationActivity.this,teacherTextview,teacherList);
             }
         });
+    }
+
+    public void buttoSaveSchedule(View view) {
+        Toast.makeText(this, "типо данные сохранены Нет бд потом добавлю", Toast.LENGTH_SHORT).show();
     }
 }

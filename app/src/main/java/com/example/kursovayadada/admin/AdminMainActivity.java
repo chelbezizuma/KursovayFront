@@ -27,7 +27,6 @@ public class AdminMainActivity extends AppCompatActivity {
     }
 
     public void addSubject(View view) {
-        Toast.makeText(this, "Нет активити для добавления предмета", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, AddSubjectActivity.class);
         startActivity(intent);
     }
