@@ -21,12 +21,16 @@ import java.util.Locale;
 public class DateActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
 
     int position;
+    String group;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_date);
         Button button = (Button) findViewById(R.id.button);
-
+        savedInstanceState = getIntent().getExtras();
+        if (savedInstanceState != null) {
+            group = savedInstanceState.getString("groupUser");
+        }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +44,7 @@ public class DateActivity extends AppCompatActivity implements DatePickerDialog.
     public void buttonOpenShedule(View view) {
 //        int day = Math.abs((position - 2) % 7);
         Intent intent = new Intent(this, MainUserScheduleActivity.class);
+        intent.putExtra("groupUser", group);
         intent.putExtra("date", position-2);
         startActivity(intent);
     }

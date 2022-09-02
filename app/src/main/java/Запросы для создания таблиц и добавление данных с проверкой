@@ -1,0 +1,216 @@
+//        SQLiteDatabase database1 = dayOfWeeksDbHelper1.getWritableDatabase();
+//        database1.execSQL("create table " + DayOfWeeksDbHelper.TABLE_DAY_OF_WEEK + "(" + DayOfWeeksDbHelper.KEY_ID + " integer primary key, " +
+//                DayOfWeeksDbHelper.KEY_NAME + " text "
+//                + ")"
+//        );
+//        SQLiteDatabase database2 = facultysAndSpecialitysDbHelper1.getWritableDatabase();
+//        database2.execSQL("create table " + FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS + "(" + FacultysAndSpecialitysDbHelper.KEY_ID + " integer primary key, " +
+//                FacultysAndSpecialitysDbHelper.KEY_FACULTYS + " text, "+
+//                FacultysAndSpecialitysDbHelper.KEY_SPECIALITY + " text "
+//                + ");"
+//        );
+////        SQLiteDatabase database3 = specialityDbHelper1.getWritableDatabase();
+//        SQLiteDatabase database4 = timesDbHelper1.getWritableDatabase();
+//        database4.execSQL("create table " + TimesDbHelper.TABLE_TIME + "(" + TimesDbHelper.KEY_ID + " integer primary key, " +
+//                TimesDbHelper.KEY_NAME + " text "
+//                + ");"
+//        );
+//        Обновление данных
+//        database.execSQL("UPDATE  users SET login ='b' WHERE _id = 1");
+//        database.execSQL("UPDATE  users SET password = 'b' WHERE _id = 1");
+//        Добавление в бд данных
+
+ContentValues contentValues4 = new ContentValues();
+
+        contentValues4.put(DbHelperUsers.KEY_GROUP_ID,"09-952");
+        contentValues4.put(DbHelperUsers.KEY_ROLE,"usr");
+        contentValues4.put(DbHelperUsers.KEY_NAME,"Юзеров Юзер Юзерьевич");
+        contentValues4.put(DbHelperUsers.KEY_LOGIN,"a");
+        contentValues4.put(DbHelperUsers.KEY_PASSWORD,"a");
+        database.insert(DbHelperUsers.TABLE_USER, null, contentValues4);
+
+        contentValues4.put(DbHelperUsers.KEY_GROUP_ID,"0");
+        contentValues4.put(DbHelperUsers.KEY_ROLE,"adm");
+        contentValues4.put(DbHelperUsers.KEY_NAME,"Админов Админ Админович");
+        contentValues4.put(DbHelperUsers.KEY_LOGIN,"b");
+        contentValues4.put(DbHelperUsers.KEY_PASSWORD,"b");
+        database.insert(DbHelperUsers.TABLE_USER, null, contentValues4);
+
+        contentValues4.put(DbHelperUsers.KEY_GROUP_ID,"-1");
+        contentValues4.put(DbHelperUsers.KEY_ROLE,"teacher");
+        contentValues4.put(DbHelperUsers.KEY_NAME,"Тичеров Тичер Тичерович");
+        contentValues4.put(DbHelperUsers.KEY_LOGIN,"c");
+        contentValues4.put(DbHelperUsers.KEY_PASSWORD,"c");
+        database.insert(DbHelperUsers.TABLE_USER, null, contentValues4);
+
+//        ContentValues contentValues1 = new ContentValues();
+//        contentValues1.put(DayOfWeeksDbHelper.KEY_NAME,"Понедельник");
+//        database1.insert(DayOfWeeksDbHelper.TABLE_DAY_OF_WEEK, null, contentValues1);
+//        contentValues1.put(DayOfWeeksDbHelper.KEY_NAME,"Вторник");
+//        database1.insert(DayOfWeeksDbHelper.TABLE_DAY_OF_WEEK, null, contentValues1);
+//
+//        contentValues1.put(DayOfWeeksDbHelper.KEY_NAME,"Среда");
+//        database1.insert(DayOfWeeksDbHelper.TABLE_DAY_OF_WEEK, null, contentValues1);
+//
+//        contentValues1.put(DayOfWeeksDbHelper.KEY_NAME,"Четверг");
+//        database1.insert(DayOfWeeksDbHelper.TABLE_DAY_OF_WEEK, null, contentValues1);
+//
+//        contentValues1.put(DayOfWeeksDbHelper.KEY_NAME,"Пятница");
+//        database1.insert(DayOfWeeksDbHelper.TABLE_DAY_OF_WEEK, null, contentValues1);
+//
+//        contentValues1.put(DayOfWeeksDbHelper.KEY_NAME,"Суббота");
+//        database1.insert(DayOfWeeksDbHelper.TABLE_DAY_OF_WEEK, null, contentValues1);
+//
+//        ContentValues contentValues2 = new ContentValues();
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт экологии и природопользования");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Экология и природо-пользование");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт экологии и природопользования");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Почвоведение");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт экологии и природопользования");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Гидрометеорология");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт геологии и нефтегазовых технологий");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Геология");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт геологии и нефтегазовых технологий");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Нефтегазовое дело");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт вычислительной математики и информационных технологий");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Прикладная математика и информатика");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//       contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт вычислительной математики и информационных технологий");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Прикладная математика");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//       contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт вычислительной математики и информационных технологий");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Прикладная информатика");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт филологии и межкультурной коммуникации");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Лингвистика");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт филологии и межкультурной коммуникации");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Педагогическое образование");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_FACULTYS,"Институт филологии и межкультурной коммуникации");
+//        contentValues2.put(FacultysAndSpecialitysDbHelper.KEY_SPECIALITY,"Филология");
+//        database2.insert(FacultysAndSpecialitysDbHelper.TABLE_FACULTYS_AND_SPECIALITYS, null, contentValues2);
+//
+//
+//        ContentValues contentValues4 = new ContentValues();
+//
+//        contentValues4.put(TimesDbHelper.KEY_NAME,"08:30-10:00");
+//        database4.insert(TimesDbHelper.TABLE_TIME, null, contentValues4);
+//
+//        contentValues4.put(TimesDbHelper.KEY_NAME,"10:10-11:40");
+//        database4.insert(TimesDbHelper.TABLE_TIME, null, contentValues4);
+//
+//        contentValues4.put(TimesDbHelper.KEY_NAME,"12:10-13:40");
+//        database4.insert(TimesDbHelper.TABLE_TIME, null, contentValues4);
+//
+//        contentValues4.put(TimesDbHelper.KEY_NAME,"13:50-15:20");
+//        database4.insert(TimesDbHelper.TABLE_TIME, null, contentValues4);
+//
+//        contentValues4.put(TimesDbHelper.KEY_NAME,"15:50-17:20");
+//        database4.insert(TimesDbHelper.TABLE_TIME, null, contentValues4);
+//
+//
+//        contentValues4.put(TimesDbHelper.KEY_NAME,"17:30-19:00");
+//        database4.insert(TimesDbHelper.TABLE_TIME, null, contentValues4);
+//
+//        contentValues4.put(TimesDbHelper.KEY_NAME,"19:10-20:40");
+//        database4.insert(TimesDbHelper.TABLE_TIME, null, contentValues4);
+
+//        contentValues.put(dbHelperUsers.KEY_PASSWORD,"c");
+//        contentValues.put(dbHelperUsers.KEY_LOGIN,"c");
+//        contentValues.put(dbHelperUsers.KEY_ROLE,"teacher");
+
+//        Cursor cursor = database1.query(DayOfWeeksDbHelper.TABLE_DAY_OF_WEEK, null, null, null, null, null, null);
+//
+//        if (cursor.moveToFirst()) {
+//            int idIndex = cursor.getColumnIndex(DayOfWeeksDbHelper.KEY_ID);
+////            int groupIdIndex = cursor.getColumnIndex(DbHelperUsers.KEY_GROUP_ID);
+//            int nameIndex = cursor.getColumnIndex(DayOfWeeksDbHelper.KEY_NAME);
+////            int roleIndex = cursor.getColumnIndex(DbHelperUsers.KEY_ROLE);
+////            int loginIndex = cursor.getColumnIndex(DbHelperUsers.KEY_LOGIN);
+////            int passwordIndex = cursor.getColumnIndex(DbHelperUsers.KEY_PASSWORD);
+//            do {
+//                Log.d("mLog", "ID" + cursor.getInt(idIndex) +
+////                        ", group_id" + cursor.getString(groupIdIndex) +
+//                        ", name" + cursor.getString(nameIndex)
+////                        ", role" + cursor.getString(roleIndex) +
+////                        ", login" + cursor.getString(loginIndex) +
+////                        ", password" + cursor.getString(passwordIndex)
+//                );
+////                users.add(new User(cursor.getInt(idIndex),cursor.getString(groupIdIndex),cursor.getString(nameIndex),
+////                        cursor.getString(roleIndex),cursor.getString(loginIndex),cursor.getString(passwordIndex)));
+//            } while (cursor.moveToNext());
+//        }else {
+//            Log.d("mLog", "0 rows");
+//        }
+
+        //        Cursor cursor = database.query(DbHelperUsers.TABLE_USER, null, null, null, null, null, null);
+
+//        if (cursor.moveToFirst()) {
+//            int idIndex = cursor.getColumnIndex(DbHelperUsers.KEY_ID);
+//            int groupIdIndex = cursor.getColumnIndex(DbHelperUsers.KEY_GROUP_ID);
+//            int nameIndex = cursor.getColumnIndex(DbHelperUsers.KEY_NAME);
+//            int roleIndex = cursor.getColumnIndex(DbHelperUsers.KEY_ROLE);
+//            int loginIndex = cursor.getColumnIndex(DbHelperUsers.KEY_LOGIN);
+//            int passwordIndex = cursor.getColumnIndex(DbHelperUsers.KEY_PASSWORD);
+//            do {
+//                Log.d("mLog", "ID" + cursor.getInt(idIndex) +
+//                        ", group_id" + cursor.getString(groupIdIndex) +
+//                        ", name" + cursor.getString(nameIndex) +
+//                        ", role" + cursor.getString(roleIndex) +
+//                        ", login" + cursor.getString(loginIndex) +
+//                        ", password" + cursor.getString(passwordIndex)
+//                );
+//                users.add(new User(cursor.getInt(idIndex),cursor.getString(groupIdIndex),cursor.getString(nameIndex),
+//                        cursor.getString(roleIndex),cursor.getString(loginIndex),cursor.getString(passwordIndex)));
+//            } while (cursor.moveToNext());
+//        }else {
+//            Log.d("mLog", "0 rows");
+//        }
+
+ SQLiteDatabase database1 = teachersDbHelper.getWritableDatabase();
+        database1.execSQL("create table " + TeachersDbHelper.TABLE_TEACHERS + "(" + TeachersDbHelper.KEY_ID + " integer primary key, " +
+                TeachersDbHelper.KEY_NAME + " text, "+
+                TeachersDbHelper.KEY_FACULTY + " text, "+
+                TeachersDbHelper.KEY_SUBJECT + " text "
+                + ");"
+        );
+
+
+        ContentValues contentValues1 = new ContentValues();
+
+
+        contentValues1.put(TeachersDbHelper.KEY_NAME,"Васильев Даниил Константинович");
+        contentValues1.put(TeachersDbHelper.KEY_FACULTY,"Институт филологии и межкультурной коммуникации");
+        contentValues1.put(TeachersDbHelper.KEY_SUBJECT,"Русский язык");
+        database1.insert(TeachersDbHelper.TABLE_TEACHERS, null, contentValues1);
+
+
+        contentValues1.put(TeachersDbHelper.KEY_NAME,"Пахомова Аиша Андреевна");
+        contentValues1.put(TeachersDbHelper.KEY_FACULTY,"Институт филологии и межкультурной коммуникации");
+        contentValues1.put(TeachersDbHelper.KEY_SUBJECT,"Русский язык");
+        database1.insert(TeachersDbHelper.TABLE_TEACHERS, null, contentValues1);
+
+        contentValues1.put(TeachersDbHelper.KEY_NAME,"Лапина Эмилия Арсентьевна");
+        contentValues1.put(TeachersDbHelper.KEY_FACULTY,"Институт вычислительной математики и информационных технологий");
+        contentValues1.put(TeachersDbHelper.KEY_SUBJECT,"Алгебра и геометрия");
+        database1.insert(TeachersDbHelper.TABLE_TEACHERS, null, contentValues1);
+
+        contentValues1.put(TeachersDbHelper.KEY_NAME,"Петров Георгий Ярославович");
+        contentValues1.put(TeachersDbHelper.KEY_FACULTY,"Институт филологии и межкультурной коммуникации");
+        contentValues1.put(TeachersDbHelper.KEY_SUBJECT,"Иностранный язык");
+        database1.insert(TeachersDbHelper.TABLE_TEACHERS, null, contentValues1);
+
+        contentValues1.put(TeachersDbHelper.KEY_NAME,"Егоров Андрей Александрович");
+        contentValues1.put(TeachersDbHelper.KEY_FACULTY,"Институт вычислительной математики и информационных технологий");
+        contentValues1.put(TeachersDbHelper.KEY_SUBJECT,"Математический анализ");
+        database1.insert(TeachersDbHelper.TABLE_TEACHERS, null, contentValues1);
+

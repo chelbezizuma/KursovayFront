@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.kursovayadada.R;
-import com.example.kursovayadada.User;
+import com.example.kursovayadada.models.User;
 
 public class AdminMainActivity extends AppCompatActivity {
     @Override

@@ -7,28 +7,10 @@
     tools:context=".admin.AddSubjectActivity">
 
     <TextView
-        android:id="@+id/specialityTextview"
-        android:layout_width="235dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="58dp"
-        android:background="@android:drawable/editbox_background"
-        android:gravity="center_vertical"
-        android:hint="Выберите специальность"
-        android:padding="12dp"
-        app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
-        app:layout_constraintBottom_toTopOf="@+id/TextviewTeacher"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/facultyTextview"
-        app:layout_constraintVertical_bias="0.060000002"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
         android:id="@+id/TextviewTeacher"
         android:layout_width="235dp"
         android:layout_height="41dp"
+        android:layout_marginTop="151dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="218dp"
         android:background="@android:drawable/editbox_background"
@@ -42,7 +24,7 @@
         app:layout_constraintBottom_toTopOf="@+id/saveSubjectButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/specialityTextview"
+        app:layout_constraintTop_toBottomOf="@+id/facultyTextview"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -56,36 +38,19 @@
         android:hint="Выберите факультет"
         android:padding="12dp"
         app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
-        app:layout_constraintBottom_toTopOf="@+id/specialityTextview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextNameSubject"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView14"
-        android:layout_width="123dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="4dp"
-        android:text="Название специальности"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintEnd_toStartOf="@+id/specialityTextview"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <TextView
         android:id="@+id/textView12"
         android:layout_width="107dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="37dp"
-        android:layout_marginBottom="68dp"
         android:text="Название факультета"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toStartOf="@+id/facultyTextview"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -95,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="175dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="235dp"
         android:text="Преподаватель"
@@ -103,8 +68,7 @@
         app:layout_constraintEnd_toStartOf="@+id/TextviewTeacher"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Button
         android:id="@+id/saveSubjectButton"
