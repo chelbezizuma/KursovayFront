@@ -10,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 
 import com.example.kursovayadada.R;
+import com.example.kursovayadada.UserGroupSelectionActivity;
 import com.example.kursovayadada.models.User;
 import com.example.kursovayadada.user.schedule.MainUserScheduleActivity;
 
@@ -30,7 +31,7 @@ public class UserMainActivity extends AppCompatActivity {
         savedInstanceState = getIntent().getExtras();
         if (savedInstanceState != null) {
             user = (User) savedInstanceState.getSerializable("user");
-            group = user.getGroupId();
+            group = user.getGroup_id();
             textViewNameUser.setText(user.getName());
             System.out.println(textViewNameUser.getText().toString());
         }
@@ -41,7 +42,7 @@ public class UserMainActivity extends AppCompatActivity {
 //        System.err.println("userInputDateString"+userInputDateString);
         Intent intent = new Intent(this, DateActivity.class);
         intent.putExtra("groupUser", group);
-        System.out.println("asdzxcmzlxvnlodmvksl"+ user.getRole());
+//        System.out.println("asdzxcmzlxvnlodmvksl"+ user.getRole());
         if (user.getRole().equals("teacher"))
             intent.putExtra("teacherName", user.getName());
 //        SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
@@ -60,6 +61,11 @@ public class UserMainActivity extends AppCompatActivity {
         if (user.getRole().equals("teacher"))
             intent.putExtra("teacherName", user.getName());
         intent.putExtra("date", getDayNumberOld(date)-2);
+        startActivity(intent);
+    }
+
+    public void buttonFindOutScheduleFromAnotherGroup(View view) {
+        Intent intent = new Intent(this, UserGroupSelectionActivity.class);
         startActivity(intent);
     }
 

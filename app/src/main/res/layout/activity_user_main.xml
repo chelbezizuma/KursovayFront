@@ -6,58 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".user.UserMainActivity">
 
-    <TextView
-        android:id="@+id/textViewNameUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="200dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/buttonScheduleCertainDay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="200dp"
-        android:text="ФИО пользователя"
-        app:layout_constraintBottom_toTopOf="@+id/buttonScheduleCertainDay"
-        app:layout_constraintEnd_toStartOf="@+id/textViewNameUser"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/buttonScheduleCertainDay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="187dp"
-        android:onClick="buttonScheduleToday"
-        android:text="Расписание на сегодня"
-        app:layout_constraintBottom_toTopOf="@+id/buttonScheduleСertainDay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonScheduleСertainDay"
-        android:layout_width="240dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginBottom="323dp"
-        android:onClick="buttonScheduleCertainDay"
-        android:text="Расписание на определенный день"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="333dp"
+        android:layout_height="531dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="253dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewNameUser"
+            android:layout_width="152dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginBottom="291dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/buttonScheduleCertainDay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.578"
+            app:layout_constraintStart_toEndOf="@+id/textView19"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="ФИО пользователя"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonScheduleСertainDay"
+            android:layout_width="240dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="44dp"
+            android:onClick="buttonScheduleCertainDay"
+            android:text="Расписание на определенный день"
+            app:layout_constraintBottom_toTopOf="@+id/buttonFindOutScheduleFromAnotherGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonFindOutScheduleFromAnotherGroup"
+            android:layout_width="240dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="52dp"
+            android:onClick="buttonFindOutScheduleFromAnotherGroup"
+            android:text="Узнать расписание у другой группы"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonScheduleCertainDay"
+            android:layout_width="241dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginEnd="46dp"
+            android:layout_marginBottom="56dp"
+            android:onClick="buttonScheduleToday"
+            android:text="Расписание на сегодня"
+            app:layout_constraintBottom_toTopOf="@+id/buttonScheduleСertainDay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

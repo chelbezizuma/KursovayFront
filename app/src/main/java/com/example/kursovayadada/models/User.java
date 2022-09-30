@@ -9,9 +9,12 @@ import lombok.Data;
 @AllArgsConstructor
 public class User implements Serializable {
     private int id;
-    private String groupId;
+    private String group_id;
     private String name;
     private String role;
     private String login;
     private String password;
+
+    public User() {
+    }
 }

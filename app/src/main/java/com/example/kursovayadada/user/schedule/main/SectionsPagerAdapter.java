@@ -46,6 +46,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public SectionsPagerAdapter(Context context, FragmentManager fm, ArrayList<DescriptionOfItemInList> descriptionOfItemInLists) {
         super(fm);
         mContext = context;
+        System.out.println(descriptionOfItemInLists);
         this.descriptionOfItemInLists = descriptionOfItemInLists;
     }
 //    private void setInitialData(){
@@ -60,37 +61,43 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
 //        setInitialData();
+        for (int i = 0; i < descriptionOfItemInLists.size(); i++) {
+            System.out.println("aaaaaaaaaa"+descriptionOfItemInLists.get(i).getGroups());
+            System.out.println("aaaaaaaaaa"+descriptionOfItemInLists.get(i).getDayOfWeek());
+            System.out.println("aaaaaaaaaa"+descriptionOfItemInLists.get(i).getTeacher());
+            System.out.println("aaaaaaaaaa"+descriptionOfItemInLists.get(i).getDayOfWeek());
+        }
         switch(position){
             case 0:
                 return FragmentRaspisanie1.newInstance(descriptionOfItemInLists
                         .stream()
-                        .filter(subjectList -> "Понедельник".equals(subjectList.getDay()))
+                        .filter(subjectList -> "Понедельник".equals(subjectList.getDayOfWeek()))
                         .collect(Collectors.toCollection(ArrayList::new)));
 
             case 1:
                 return FragmentRaspisanie2.newInstance(descriptionOfItemInLists
                         .stream()
-                        .filter(subjectList -> "Вторник".equals(subjectList.getDay()))
+                        .filter(subjectList -> "Вторник".equals(subjectList.getDayOfWeek()))
                         .collect(Collectors.toCollection(ArrayList::new)));
             case 2:
                 return FragmentRaspisanie3.newInstance(descriptionOfItemInLists
                         .stream()
-                        .filter(subjectList -> "Среда".equals(subjectList.getDay()))
+                        .filter(subjectList -> "Среда".equals(subjectList.getDayOfWeek()))
                         .collect(Collectors.toCollection(ArrayList::new)));
             case 3:
                 return FragmentRaspisanie4.newInstance(descriptionOfItemInLists
                         .stream()
-                        .filter(subjectList -> "Четверг".equals(subjectList.getDay()))
+                        .filter(subjectList -> "Четверг".equals(subjectList.getDayOfWeek()))
                         .collect(Collectors.toCollection(ArrayList::new)));
             case 4:
                 return FragmentRaspisanie5.newInstance(descriptionOfItemInLists
                         .stream()
-                        .filter(subjectList -> "Пятница".equals(subjectList.getDay()))
+                        .filter(subjectList -> "Пятница".equals(subjectList.getDayOfWeek()))
                         .collect(Collectors.toCollection(ArrayList::new)));
             case 5:
                 return FragmentRaspisanie6.newInstance(descriptionOfItemInLists
                         .stream()
-                        .filter(subjectList -> "Суббота".equals(subjectList.getDay()))
+                        .filter(subjectList -> "Суббота".equals(subjectList.getDayOfWeek()))
                         .collect(Collectors.toCollection(ArrayList::new)));
             default:
                 return null;

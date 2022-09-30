@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminChangeScheduleActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="396dp"
+        android:layout_height="831dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="398dp"
+            android:layout_height="690dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/dayTextview2"
+                android:layout_width="235dp"
+                android:layout_height="41dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="184dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center_vertical"
+                android:hint="Выберите день недели"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/groupTextview2"
+                android:layout_width="235dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="68dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center_vertical"
+                android:hint="Выберите группу"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toTopOf="@+id/timeTextview2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="99dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginBottom="140dp"
+                android:text="Номер Группы"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintEnd_toStartOf="@+id/groupTextview2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/timeTextview2"
+                android:layout_width="235dp"
+                android:layout_height="41dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="68dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center_vertical"
+                android:hint="Выберите время"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toTopOf="@+id/chetnostTextview2"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/chetnostTextview2"
+                android:layout_width="224dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="81dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center_vertical"
+                android:hint="Выберите время"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toTopOf="@+id/dayTextview2"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="77dp"
+                android:layout_marginBottom="100dp"
+                android:text="Время"
+                app:layout_constraintBottom_toTopOf="@+id/textView22"
+                app:layout_constraintEnd_toStartOf="@+id/timeTextview2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="99dp"
+                android:text="Четность недели"
+                app:layout_constraintBottom_toTopOf="@+id/textView14"
+                app:layout_constraintEnd_toStartOf="@+id/chetnostTextview2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="112dp"
+                android:text="День недели"
+                app:layout_constraintBottom_toTopOf="@+id/buttonExitMenu"
+                app:layout_constraintEnd_toStartOf="@+id/dayTextview2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/buttonСhange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="102dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="41dp"
+                android:onClick="buttonChange"
+                android:text="Изменить"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayTextview2" />
+
+            <Button
+                android:id="@+id/buttonExitMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="102dp"
+                android:layout_marginEnd="66dp"
+                android:layout_marginBottom="41dp"
+                android:onClick="buttonExitMenu"
+                android:text="Выйти в меню"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonСhange"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayTextview2" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Изменить расписание"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

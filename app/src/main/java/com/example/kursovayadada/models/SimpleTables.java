@@ -8,4 +8,7 @@ import lombok.Data;
 public class SimpleTables {
     int id;
     String name;
+
+    public SimpleTables() {
+    }
 }

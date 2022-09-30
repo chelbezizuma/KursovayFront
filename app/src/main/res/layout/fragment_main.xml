@@ -10,8 +10,8 @@
 
     <ListView
         android:id="@+id/listRaspisanie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="395dp"
+        android:layout_height="845dp" />
 
     <TextView
         android:id="@+id/section_label"

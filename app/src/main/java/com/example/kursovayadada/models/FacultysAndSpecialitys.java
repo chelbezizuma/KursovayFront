@@ -9,4 +9,7 @@ public class FacultysAndSpecialitys {
     int id;
     String facultys;
     String specialitys;
+
+    public FacultysAndSpecialitys() {
+    }
 }

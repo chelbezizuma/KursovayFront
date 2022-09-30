@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.TeacherAddTaskActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="394dp"
+        android:layout_height="829dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="400dp"
+            android:layout_height="469dp"
+            android:layout_marginBottom="9dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="287dp"
+                android:layout_height="151dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="19dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Nameasssssssssssssssssssssssssssssssss"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="69dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="78dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="65dp"
+                android:text="Введите задание"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout9"
+                app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="392dp"
+                android:layout_height="213dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="23dp"
+                app:layout_constraintBottom_toTopOf="@+id/groupTextview4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="167dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="201dp"
+                    android:text="Сроки"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="62dp"
+                    android:layout_marginBottom="21dp"
+                    android:onClick="startDeadLine"
+                    android:text="Начало"
+                    app:layout_constraintBottom_toTopOf="@+id/button5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="31dp"
+                    android:onClick="endDeadLine"
+                    android:text="Завершение"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewStartDeadLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginBottom="52dp"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewEndDeadLine"
+                    app:layout_constraintStart_toEndOf="@+id/button4" />
+
+                <TextView
+                    android:id="@+id/textViewEndDeadLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginBottom="47dp"
+                    android:text="TextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="27dp"
+                android:text="Номер Группы"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/groupTextview4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+
+            <TextView
+                android:id="@+id/groupTextview4"
+                android:layout_width="235dp"
+                android:layout_height="41dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center_vertical"
+                android:hint="Выберите группу"
+                android:padding="12dp"
+                app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="143dp"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="30dp"
+            android:text="Добавить задание"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout10"
+            android:layout_width="394dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="104dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="22dp"
+                android:onClick="exit"
+                android:text="Отмена"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="63dp"
+                android:layout_marginBottom="22dp"
+                android:onClick="addTakSubject"
+                android:text="Добавить"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
